@@ -1,0 +1,22 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer pulse ring -->
+  <circle cx="12" cy="12" r="10" fill="none" stroke="#007cba" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Middle ring -->
+  <circle cx="12" cy="12" r="8" fill="none" stroke="#007cba" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main dot -->
+  <circle cx="12" cy="12" r="6" fill="#007cba" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Inner highlight -->
+  <circle cx="12" cy="12" r="3" fill="#4fc3f7" opacity="0.8"/>
+  
+  <!-- Center dot -->
+  <circle cx="12" cy="12" r="1.5" fill="#ffffff"/>
+</svg>
