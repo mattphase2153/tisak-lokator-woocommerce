@@ -1,0 +1,39 @@
+.tab-content {
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+    margin-bottom: 30px;
+}
+.tisak-setting-row {
+    margin-bottom: 20px;
+}
+.tisak-setting-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.tisak-setting-row input[type="text"],
+.tisak-setting-row input[type="number"],
+.tisak-setting-row input[type="color"],
+.tisak-setting-row select,
+.tisak-setting-row textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.tisak-setting-row textarea {
+    height: 120px;
+}
+.tisak-setting-row .description {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+.tisak-settings-form input[type="radio"] {
+    margin-right: 6px;
+}

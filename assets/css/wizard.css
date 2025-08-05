@@ -1,0 +1,347 @@
+/* Wizard wrapper */
+.tisak-wizard-wrap {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+/* Header */
+.tisak-wizard-header {
+    background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+.tisak-wizard-header h1 {
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+/* Steps */
+.tisak-wizard-steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.step-line {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+}
+.step-line-progress {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    transition: width 0.5s ease;
+    width: 0;
+}
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.5;
+    transition: all 0.3s;
+    z-index: 2;
+    flex: 1;
+}
+.step.active,
+.step.completed {
+    opacity: 1;
+}
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+}
+.step.active .step-number {
+    background: #fff;
+    color: #0073aa;
+    border-color: #fff;
+    transform: scale(1.1);
+}
+.step.completed .step-number {
+    background: #fff;
+    color: #0073aa;
+    border-color: #fff;
+}
+.step-label {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+/* Content */
+.wizard-content {
+    padding: 60px 40px;
+}
+.wizard-panel {
+    display: none;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.wizard-panel.step-1 {
+    display: block;
+}
+.wizard-icon {
+    margin-bottom: 30px;
+}
+.wizard-icon img {
+    max-width: 100px;
+    height: auto;
+}
+.wizard-icon.success svg {
+    stroke: #28a745;
+}
+.wizard-panel h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #23282d;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+}
+.wizard-lead {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 40px 0;
+}
+/* Features */
+.wizard-features {
+    display: grid;
+    gap: 20px;
+    margin: 40px 0;
+    text-align: left;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wizard-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #23282d;
+}
+.wizard-feature svg {
+    flex-shrink: 0;
+}
+/* Form */
+.wizard-form-group {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 400px;
+}
+.wizard-form-group label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #23282d;
+}
+.wizard-select-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.wizard-select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    transition: all 0.3s;
+}
+.wizard-select:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+.wizard-help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.info-circle {
+    width: 16px;
+    height: 16px;
+    background: #0073aa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.info-circle svg {
+    width: 12px;
+    height: 12px;
+}
+.wizard-help small {
+    color: #666;
+    line-height: 1.5;
+}
+/* Next steps */
+.wizard-next-steps {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+}
+.wizard-next-steps h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #23282d;
+}
+.wizard-next-steps ol {
+    margin: 0;
+    padding-left: 25px;
+}
+.wizard-next-steps li {
+    margin-bottom: 10px;
+    color: #666;
+}
+/* Buttons */
+.wizard-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+.wizard-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.wizard-button-primary {
+    background: #0073aa;
+    color: #fff;
+}
+.wizard-button-primary:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 115, 170, 0.3);
+}
+.wizard-button-secondary {
+    background: #f0f0f1;
+    color: #23282d;
+}
+.wizard-button-secondary:hover {
+    background: #e0e0e0;
+}
+.wizard-button svg {
+    transition: transform 0.3s;
+}
+.wizard-button:hover svg {
+    transform: translateX(2px);
+}
+.wizard-button-secondary:hover svg {
+    transform: translateX(-2px);
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Responsive */
+@media (max-width: 600px) {
+    .tisak-wizard-header {
+        padding: 30px 20px;
+    }
+   
+    .tisak-wizard-header h1 {
+        font-size: 24px;
+    }
+   
+    .wizard-content {
+        padding: 40px 20px;
+    }
+   
+    .wizard-panel h2 {
+        font-size: 26px;
+    }
+   
+    .wizard-lead {
+        font-size: 16px;
+    }
+   
+    .tisak-wizard-steps {
+        gap: 10px;
+    }
+   
+    .step-label {
+        font-size: 12px;
+    }
+   
+    .wizard-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+   
+    .wizard-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .woocommerce-checkout .info-circle {
+    width: 16px;
+    height: 16px;
+    background: #0073aa;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    }
+    .woocommerce-checkout .info-circle svg {
+    width: 12px;
+    height: 12px;
+    stroke: #fff;
+    }
+}

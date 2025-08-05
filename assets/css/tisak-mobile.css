@@ -1,0 +1,188 @@
+/* Tisak Lokator - Advanced Mobile Optimizations */
+/* Touch-friendly interactions */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+@media (max-width: 768px) {
+    /* Glavni kontejner - touch optimized */
+    .tisak-lokator-section {
+        width: 100% !important;
+        padding: 12px !important;
+        margin: 8px 0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+   
+    /* GPS dugme - velika touch zona */
+    .tisak-gps-btn {
+        padding: 14px 18px !important;
+        font-size: 14px !important;
+        min-width: 140px !important;
+        min-height: 44px !important; /* Apple minimum touch target */
+        margin: 8px 0 !important;
+        border-radius: 8px !important;
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+   
+    .tisak-gps-btn:active {
+        transform: scale(0.98) !important;
+        transition: transform 0.1s ease !important;
+    }
+   
+    /* Dropdown - touch friendly */
+    #tisak_lokacija {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+        padding: 12px !important;
+        min-height: 44px !important;
+        border-radius: 6px !important;
+        min-height: 44px !important;
+        margin-bottom: 12px !important;
+        background: white !important;
+        border: 2px solid #ddd !important;
+        touch-action: manipulation;
+    }
+   
+    #tisak_lokacija:focus {
+        border-color: #007cba !important;
+        box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.2) !important;
+    }
+   
+    /* Mapa - mobile optimized */
+    #tisak-map {
+        width: 100% !important;
+        height: 250px !important;
+        margin: 12px 0 !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        touch-action: pan-x pan-y !important;
+    }
+   
+    /* Leaflet controls - bigger for touch */
+    .leaflet-control-zoom a {
+        width: 44px !important;
+        height: 44px !important;
+        line-height: 44px !important;
+        font-size: 20px !important;
+        border-radius: 6px !important;
+    }
+   
+    .leaflet-control-zoom {
+        margin: 10px !important;
+    }
+   
+    /* Info kartica - readable on mobile */
+    .tisak-info-card {
+        padding: 16px !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        border-radius: 8px !important;
+        margin-top: 12px !important;
+    }
+   
+    .tisak-info-card h3 {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+   
+    .tisak-info-card p,
+    .tisak-info-card li {
+        font-size: 14px !important;
+        margin-bottom: 6px !important;
+    }
+   
+    .tisak-info-card strong {
+        font-weight: 600 !important;
+    }
+   
+    /* Status messages - mobile friendly */
+    .tisak-gps-status {
+        font-size: 13px !important;
+        padding: 8px !important;
+        text-align: center !important;
+        min-height: 20px !important;
+    }
+   
+    /* Popup styling for mobile */
+    .leaflet-popup-content {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin: 8px 12px !important;
+    }
+   
+    .leaflet-popup-content-wrapper {
+        border-radius: 8px !important;
+    }
+}
+@media (max-width: 480px) {
+    /* Još manji ekrani - extra optimizations */
+   
+    .tisak-lokator-section {
+        padding: 10px !important;
+        margin: 5px 0 !important;
+    }
+   
+    #tisak-map {
+        height: 200px !important;
+    }
+   
+    .tisak-gps-btn {
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+        min-width: 120px !important;
+    }
+   
+    .tisak-info-card {
+        padding: 12px !important;
+        font-size: 13px !important;
+    }
+   
+    .tisak-info-card h3 {
+        font-size: 15px !important;
+    }
+   
+    .tisak-info-card p,
+    .tisak-info-card li {
+        font-size: 13px !important;
+    }
+}
+/* Landscape mode optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    #tisak-map {
+        height: 180px !important;
+    }
+   
+    .tisak-info-card {
+        padding: 10px !important;
+    }
+}
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tisak-gps-btn {
+        border: 0.5px solid rgba(0,0,0,0.1) !important;
+    }
+}
+/* iOS specific optimizations */
+@supports (-webkit-overflow-scrolling: touch) {
+    #tisak-map {
+        -webkit-overflow-scrolling: touch !important;
+    }
+   
+    .tisak-gps-btn {
+        -webkit-appearance: none !important;
+        -webkit-border-radius: 8px !important;
+    }
+   
+    #tisak_lokacija {
+        -webkit-appearance: none !important;
+        -webkit-border-radius: 6px !important;
+    }
+}
+/* Android specific optimizations */
+@media screen and (-webkit-device-pixel-ratio: 1) {
+    .tisak-gps-btn {
+        font-weight: 500 !important;
+    }
+}

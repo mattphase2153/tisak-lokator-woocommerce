@@ -1,0 +1,591 @@
+/* Tisak Lokator Ultimate - Professional CSS */
+/* CSS Variables - can be overridden by plugin settings */
+:root {
+    --tisak-section-margin: 20px;
+    --tisak-section-padding: 20px;
+    --tisak-section-bg-color: #ffffff;
+    --tisak-section-border-color: #e0e0e0;
+    --tisak-section-border-width: 1px;
+    --tisak-section-border-radius: 8px;
+    --tisak-title-color: #333333;
+    --tisak-title-size: 18px;
+    --tisak-title-weight: bold;
+    --tisak-title-margin-bottom: 15px;
+    --tisak-font-size-pc: 16px;
+    --tisak-font-size-mobile: 14px;
+    --tisak-dropdown-bg-color: #ffffff;
+    --tisak-dropdown-border-color: #dddddd;
+    --tisak-dropdown-text-color: #333333;
+    --tisak-dropdown-hover-bg: #f5f5f5;
+    --tisak-dropdown-padding: 10px;
+    --tisak-dropdown-border-radius: 4px;
+    --tisak-btn-bg-color: #007cba;
+    --tisak-btn-text-color: #ffffff;
+    --tisak-btn-hover-bg: #ffffff;
+    --tisak-btn-border-radius: 6px;
+    --tisak-btn-padding-x: 20px;
+    --tisak-btn-padding-y: 10px;
+    --tisak-btn-font-size: 14px;
+    --tisak-btn-font-weight: 600;
+    --tisak-info-bg-color: #f8f9fa;
+    --tisak-info-border-color: #dee2e6;
+    --tisak-info-title-color: #212529;
+    --tisak-info-label-color: #495057;
+    --tisak-info-text-color: #6c757d;
+    --tisak-info-padding: 15px;
+    --tisak-info-border-radius: 6px;
+    --tisak-map-height-pc: 300px;
+    --tisak-map-border-color: #dddddd;
+    --tisak-map-border-width: 1px;
+    --tisak-map-border-radius: 4px;
+    --tisak-marker-color: #dc3545;
+    --tisak-marker-active-color: #007cba;
+    --tisak-marker-user-color: #007bff;
+    --tisak-marker-size: 12px;
+    --tisak-marker-active-size: 32px;
+}
+/* Main section */
+.tisak-lokator-section {
+    margin: var(--tisak-section-margin) 0;
+    padding: var(--tisak-section-padding);
+    background: var(--tisak-section-bg-color);
+    border: var(--tisak-section-border-width) solid var(--tisak-section-border-color);
+    border-radius: var(--tisak-section-border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: var(--tisak-font-size-pc);
+}
+/* Title */
+.tisak-lokator-section h3 {
+    margin-top: 0;
+    margin-bottom: var(--tisak-title-margin-bottom);
+    color: var(--tisak-title-color);
+    font-size: var(--tisak-title-size);
+    font-weight: var(--tisak-title-weight);
+    line-height: 1.4;
+}
+/* Form fields */
+.tisak-lokator-section .form-row-wide {
+    margin-bottom: 15px;
+}
+.tisak-lokator-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--tisak-title-color);
+    font-weight: 600;
+}
+/* Required asterisk */
+.tisak-lokator-section .required {
+    color: #e2401c !important;
+    text-decoration: none;
+}
+/* Label i GPS button row */
+.tisak-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.tisak-label-row label {
+    margin-bottom: 0 !important;
+    display: inline-block;
+}
+/* Dropdown wrapper */
+.tisak-dropdown-wrapper {
+    width: 100%;
+}
+/* Dropdown select */
+.tisak-lokator-section select,
+#tisak_lokacija {
+    width: 100%;
+    padding: var(--tisak-dropdown-padding);
+    background: var(--tisak-dropdown-bg-color);
+    border: 1px solid var(--tisak-dropdown-border-color);
+    border-radius: var(--tisak-dropdown-border-radius);
+    color: var(--tisak-dropdown-text-color);
+    font-size: inherit;
+    line-height: 1.5;
+}
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+    display: none !important;
+}
+.tisak-lokator-section select:hover,
+#tisak_lokacija:hover {
+    border-color: var(--tisak-btn-bg-color);
+    background-color: var(--tisak-dropdown-hover-bg);
+}
+.tisak-lokator-section select:focus,
+#tisak_lokacija:focus {
+    outline: none;
+    border-color: var(--tisak-btn-bg-color);
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+}
+/* GPS Button */
+.tisak-gps-btn,
+#tisak-gps-btn {
+    background-color: var(--tisak-btn-bg-color);
+    color: var(--tisak-btn-text-color);
+    border: none;
+    padding: var(--tisak-btn-padding-y) var(--tisak-btn-padding-x);
+    border-radius: var(--tisak-btn-border-radius);
+    font-size: var(--tisak-btn-font-size);
+    font-weight: var(--tisak-btn-font-weight);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+.tisak-gps-btn:hover,
+#tisak-gps-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+.tisak-gps-btn:active,
+#tisak-gps-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.tisak-gps-btn:disabled,
+.tisak-gps-btn.loading,
+#tisak-gps-btn:disabled,
+#tisak-gps-btn.loading {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+.tisak-gps-btn .gps-icon {
+    font-size: 16px;
+}
+/* GPS Status message */
+.tisak-gps-status {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    text-align: center;
+}
+/* Map container */
+#tisak-map,
+.tisak-map-container {
+    width: 100%;
+    max-width: var(--tisak-map-width-pc, 600px);
+    height: var(--tisak-map-height-pc);
+    margin: 15px 0;
+    border: var(--tisak-map-border-width) solid var(--tisak-map-border-color);
+    border-radius: var(--tisak-map-border-radius);
+    background: #f0f0f0;
+    position: relative;
+}
+/* Leaflet specific overrides */
+.leaflet-container {
+    font-size: inherit;
+}
+/* Map markers */
+.tisak-store-marker-small {
+    transition: all 0.3s ease;
+}
+.tisak-store-marker-dimmed {
+    transition: all 0.3s ease;
+    opacity: 0.4;
+}
+.selected-marker {
+    z-index: 1000 !important;
+}
+.user-location-marker {
+    z-index: 1001 !important;
+}
+/* Info container - CRITICAL FOR VISIBILITY */
+#tisak-info,
+.tisak-info-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #ffffff !important; /* Uvijek bijela */
+    border: 1px solid var(--tisak-info-border-color);
+    border-radius: var(--tisak-info-border-radius);
+    padding: var(--tisak-info-padding);
+    margin-top: 15px;
+    color: var(--tisak-info-text-color);
+    min-height: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+/* Empty state - hide */
+#tisak-info:empty,
+.tisak-info-container:empty {
+    display: none !important;
+}
+/* Info card */
+.tisak-info-card {
+    margin: 0;
+    padding: 0;
+}
+.tisak-info-card p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    color: var(--tisak-info-text-color);
+}
+.tisak-info-card p:last-child {
+    margin-bottom: 0;
+}
+.tisak-info-card strong {
+    color: var(--tisak-info-label-color);
+    font-weight: 600;
+}
+/* Title in info card */
+.tisak-info-card > p:first-child strong {
+    color: var(--tisak-info-title-color) !important;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/* Working hours styling */
+.tisak-info-card p[style*="margin: 0 0 3px 20px"],
+.tisak-info-card p[style*="margin: 0 20px"] {
+    padding-left: 20px;
+    font-size: 14px;
+}
+/* Status messages */
+.tisak-no-selection,
+.tisak-no-locations,
+#tisak-info > p[style*="color: #999"] {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+/* Loading state */
+.tisak-loading {
+    padding: 15px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+/* Error messages */
+.tisak-error {
+    color: #dc3545;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* Info box animation */
+#tisak-info {
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.tisak-info-card {
+    animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .tisak-lokator-section {
+        margin: 10px 0;
+        padding: 15px;
+        font-size: var(--tisak-font-size-mobile);
+    }
+   
+    .tisak-lokator-section h3 {
+        font-size: calc(var(--tisak-title-size) - 2px);
+        margin-bottom: 12px;
+    }
+   
+    .tisak-label-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+   
+    .tisak-gps-btn,
+    #tisak-gps-btn {
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+    }
+  
+    #tisak-map,
+    .tisak-map-container {
+        height: 250px;
+        max-width: 100%;
+    }
+  
+    .tisak-info-card {
+        font-size: 14px;
+    }
+  
+    .tisak-info-card > p:first-child strong {
+        font-size: 15px;
+    }
+}
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .tisak-lokator-section {
+        padding: 12px;
+        font-size: 13px;
+    }
+  
+    .tisak-lokator-section h3 {
+        font-size: 16px;
+    }
+  
+    #tisak_lokacija {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+/* Print styles */
+@media print {
+    .tisak-lokator-section {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+  
+    #tisak-map,
+    .tisak-map-container {
+        display: none;
+    }
+  
+    .tisak-gps-btn,
+    #tisak-gps-btn,
+    .tisak-label-row button {
+        display: none;
+    }
+}
+/* Accessibility improvements */
+.tisak-lokator-section *:focus {
+    outline: 2px solid var(--tisak-btn-bg-color);
+    outline-offset: 2px;
+}
+.tisak-gps-btn:focus,
+#tisak-gps-btn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.5);
+}
+/* Skip link for screen readers */
+.tisak-skip-link {
+    position: absolute;
+    left: -9999px;
+}
+.tisak-skip-link:focus {
+    position: relative;
+    left: 0;
+}
+/* Custom scrollbar for select */
+.tisak-lokator-section select::-webkit-scrollbar {
+    width: 8px;
+}
+.tisak-lokator-section select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.tisak-lokator-section select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.tisak-lokator-section select::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Force visibility - override theme conflicts */
+.woocommerce-checkout #tisak-info,
+.woocommerce-checkout .tisak-info-container,
+.tisak-lokator-wrapper #tisak-info,
+.tisak-lokator-wrapper .tisak-info-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* Admin preview specific */
+.tisak-preview-mockup #tisak-info,
+.wp-admin #tisak-info {
+    min-height: 80px;
+    background-color: var(--tisak-info-bg-color) !important;
+}
+.tisak-preview-mockup .tisak-info-card p,
+.wp-admin .tisak-info-card p {
+    color: var(--tisak-info-text-color) !important;
+}
+/* Transition animations */
+.tisak-info-container,
+#tisak-info {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* Loader animation */
+@keyframes tisak-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.tisak-loader {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--tisak-btn-bg-color);
+    border-radius: 50%;
+    animation: tisak-spin 1s linear infinite;
+}
+/* Ensure form row compatibility */
+.form-row .tisak-lokator-section {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* Fix for some themes that hide elements */
+.tisak-lokator-wrapper * {
+    visibility: visible !important;
+}
+/* Ensure proper spacing in info card */
+.tisak-info-card p {
+    display: block;
+    clear: both;
+}
+.tisak-info-card p strong {
+    display: inline;
+    margin-right: 5px;
+}
+/* Fix for dropdown text overflow */
+#tisak_lokacija option {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+/* Improved marker visibility */
+.leaflet-marker-icon {
+    transition: transform 0.2s ease;
+}
+.leaflet-marker-icon:hover {
+    transform: scale(1.1);
+}
+/* Selected marker highlight */
+.leaflet-marker-icon.selected-marker {
+    animation: pulse 1s ease-in-out;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Info box shadow on hover */
+#tisak-info:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Smooth transitions for all interactive elements */
+.tisak-lokator-section input,
+.tisak-lokator-section select,
+.tisak-lokator-section button,
+.tisak-lokator-section .tisak-info-container {
+    transition: all 0.3s ease;
+}
+/* Loading overlay for async operations */
+.tisak-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.tisak-loading-overlay .tisak-loader {
+    width: 40px;
+    height: 40px;
+}
+/* Ensure consistent font family */
+.tisak-lokator-section,
+.tisak-lokator-section * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+/* Fix for RTL languages */
+[dir="rtl"] .tisak-lokator-section select {
+    background-position: left 10px center;
+    padding-right: 10px;
+    padding-left: 35px;
+}
+[dir="rtl"] .tisak-label-row {
+    flex-direction: row-reverse;
+}
+[dir="rtl"] .tisak-info-card p[style*="margin: 0 0 3px 20px"],
+[dir="rtl"] .tisak-info-card p[style*="margin: 0 20px"] {
+    padding-left: 0;
+    padding-right: 20px;
+}
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tisak-lokator-section {
+        border-width: 2px;
+    }
+  
+    .tisak-gps-btn,
+    #tisak-gps-btn {
+        border-width: 2px;
+        border-color: currentColor;
+    }
+  
+    #tisak-info {
+        border-width: 2px;
+    }
+}
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .tisak-lokator-section *,
+    .tisak-info-container,
+    #tisak-info,
+    .leaflet-marker-icon {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+/* Final overrides to ensure visibility */
+.tisak-lokator-wrapper #tisak-info:not(:empty) {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+/* Ensure text remains readable */
+.tisak-info-card p,
+.tisak-info-card strong {
+    color: var(--tisak-info-text-color) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/* Override for specific themes that might hide content */
+.woocommerce .tisak-lokator-section,
+.woocommerce-page .tisak-lokator-section,
+.woocommerce-checkout .tisak-lokator-section {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+}

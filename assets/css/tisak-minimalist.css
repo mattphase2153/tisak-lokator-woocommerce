@@ -1,0 +1,241 @@
+/* Tisak Lokator - Minimalist Design */
+.tisak-smart-panel {
+    background: #ffffff !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin: 16px 0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.smart-controls {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 12px !important;
+}
+/* GPS Button - Minimalist */
+.tisak-gps-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 16px !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    min-width: 120px !important;
+    justify-content: center !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2) !important;
+}
+.tisak-gps-btn:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3) !important;
+}
+.tisak-gps-btn:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 1px 2px rgba(102, 126, 234, 0.2) !important;
+}
+.tisak-gps-btn.loading {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+    cursor: wait !important;
+    transform: none !important;
+}
+/* GPS Icon - Clean */
+.gps-icon {
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 12px !important;
+}
+/* Reset Button - Subtle */
+.tisak-reset-btn {
+    background: #f8f9fa !important;
+    color: #6c757d !important;
+    border: 1px solid #dee2e6 !important;
+    padding: 10px 14px !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+.tisak-reset-btn:hover {
+    background: #e9ecef !important;
+    border-color: #adb5bd !important;
+    color: #495057 !important;
+}
+/* Status Messages - Clean */
+.tisak-status {
+    font-size: 12px !important;
+    color: #6c757d !important;
+    min-height: 18px !important;
+    padding: 0 4px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2px !important;
+}
+.tisak-status::before {
+    content: none !important; /* Remove emojis */
+}
+/* Map Markers - Professional */
+.tisak-store-marker div {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+    color: white !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 2px solid white !important;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+}
+.user-location-marker div {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    border: 3px solid white !important;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4) !important;
+}
+/* Dropdown Enhancements */
+#tisak_lokacija {
+    font-size: 13px !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 4px !important;
+    padding: 10px 12px !important;
+    background: white !important;
+    transition: all 0.2s ease !important;
+}
+#tisak_lokacija:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15) !important;
+    outline: none !important;
+}
+/* Info Card - Modern */
+.tisak-info-card {
+    background: white !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin-top: 12px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.tisak-info-card h3 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 8px 0 !important;
+}
+.tisak-info-card p {
+    font-size: 13px !important;
+    color: #6c757d !important;
+    margin: 4px 0 !important;
+    line-height: 1.4 !important;
+}
+.tisak-info-card strong {
+    color: #495057 !important;
+    font-weight: 600 !important;
+}
+.tisak-info-card hr {
+    border: none !important;
+    border-top: 1px solid #e9ecef !important;
+    margin: 8px 0 !important;
+}
+.tisak-info-card ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 8px 0 !important;
+}
+.tisak-info-card ul li {
+    font-size: 12px !important;
+    color: #6c757d !important;
+    padding: 2px 0 !important;
+    border-bottom: 1px solid #f8f9fa !important;
+}
+.tisak-info-card ul li:last-child {
+    border-bottom: none !important;
+}
+/* Loading States */
+.tisak-loading {
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+    position: relative !important;
+}
+.tisak-loading::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: -8px 0 0 -8px !important;
+    border: 2px solid #f3f3f3 !important;
+    border-top: 2px solid #667eea !important;
+    border-radius: 50% !important;
+    animation: tisak-spin 1s linear infinite !important;
+}
+@keyframes tisak-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .smart-controls {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+   
+    .tisak-gps-btn, .tisak-reset-btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+   
+    .tisak-smart-panel {
+        padding: 12px !important;
+        margin: 12px 0 !important;
+    }
+}
+/* Hide Original Panel when Minimalist is Active */
+.tisak-minimalist-mode .tisak-smart-panel:not(.minimalist) {
+    display: none !important;
+}
+/* Section Title Enhancement */
+.tisak-lokator-section h3 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 16px 0 !important;
+    letter-spacing: 0.3px !important;
+}
+/* Clean status messages without emojis */
+.tisak-status.clean::before {
+    content: none !important;
+}
+.tisak-status.clean.loading::before {
+    content: "⏳ " !important;
+}
+.tisak-status.clean.success::before {
+    content: "✓ " !important;
+    color: #28a745 !important;
+}
+.tisak-status.clean.error::before {
+    content: "⚠ " !important;
+    color: #dc3545 !important;
+}
+.tisak-status.clean.info::before {
+    content: "ℹ " !important;
+    color: #17a2b8 !important;
+}
